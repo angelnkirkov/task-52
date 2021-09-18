@@ -8,9 +8,20 @@
       content="Used as a boilerplate for tasks in the 'HTML, CSS and SASS' course in boom.dev"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      for (let step = 0; step < 5; step++) {
+        let articleElement = document.createElement("article");
+        articleElement.classList.add("message");
+        let textNode = document.createTextNode("text");
+        articleElement.appendChild(textNode);
+        let containerDiv = document.querySelector(".container");
+        containerDiv.appendChild(articleElement);
+      }
+    </script>
   </head>
   <body>
     <div class="main">
+      <div class="container"></div>
       <div class="emoji mb-6">💣🤯💥</div>
       <button class="button">Boom?</button>
     </div>
