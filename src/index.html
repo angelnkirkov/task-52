@@ -9,17 +9,36 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script>
-      for (let step = 0; step < 5; step++) {
-        let articleElement = document.createElement("article");
-        articleElement.classList.add("message");
-        let textNode = document.createTextNode("text");
-        articleElement.appendChild(textNode);
-        let containerDiv = document.querySelector(".container");
-        containerDiv.appendChild(articleElement);
-      }
+      window.onload = function () {
+        const body1 = document.querySelector(".body");
+
+        body1.addEventListener("click", () => {
+          let a1 = document.createElement("article");
+          let a2 = document.createElement("article");
+          let a3 = document.createElement("article");
+          let a4 = document.createElement("article");
+          let a5 = document.createElement("article");
+          a1.textContent = "text1";
+          a2.textContent = "text2";
+          a3.textContent = "text3";
+          a4.textContent = "text4";
+          a5.textContent = "text5";
+          const container = document.querySelector(".container");
+          container.appendChild(a1);
+          container.appendChild(a2);
+          container.appendChild(a3);
+          container.appendChild(a4);
+          container.appendChild(a5);
+          a1.setAttribute("class", "message");
+          a2.setAttribute("class", "message");
+          a3.setAttribute("class", "message");
+          a4.setAttribute("class", "message");
+          a5.setAttribute("class", "message");
+        });
+      };
     </script>
   </head>
-  <body>
+  <body class="body">
     <div class="main">
       <div class="container"></div>
       <div class="emoji mb-6">💣🤯💥</div>
